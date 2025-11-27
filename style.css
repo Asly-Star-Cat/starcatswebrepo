@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    cursor : url("Resources/Mouse/mouseAuto.png") 8 0, auto;
+    background-color: black;
+}
+
+.nor_font {
+    color : white;
+    font-family: "Determination Mono", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    
+    cursor : url("Resources/Mouse/mouseText.png") 12 0, text;
+}
+.big_font {
+    color : white;
+    font-family: "Determination Mono", sans-serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    cursor : url("Resources/Mouse/mouseText.png") 12 0, text;
+}
+
+/* boton central */
+.button {
+    cursor : url("Resources/Mouse/mousePointer.png") 8 0, pointer;
+    position : absolute;
+    top: 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    background-image: url("Resources/FunButton/normalButton0.png");
+    background-color: black;
+    width : 64px;
+    height : 64px;
+    border : none;
+}
+.button:active {
+    background-image: url("Resources/FunButton/normalButton1.png");
+}
+
+
+/* para la animacion del texto wuwu */
+.him {
+    top: 25%;
+    left : 25%;
+    position : absolute;
+}
+.space {
+    display: inline-block;
+    width : 0.3em;
+    animation : none;
+}
+.revolving span {
+    display: inline-block;
+    animation: spin 1600ms ease-in-out infinite alternate-reverse;
+    animation-fill-mode: both;
+
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-2px, -1px);
+    }
+    100% {
+        transform: translate(2px, 1px);
+    }
+}
+
+.conteiner {
+    color : white;
+    font-family: "Determination Mono", sans-serif;
+    font-size: 40px;
+}
