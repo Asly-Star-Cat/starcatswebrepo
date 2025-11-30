@@ -1,0 +1,120 @@
+/* emmets */
+@font-face {
+    font-family: "DT Mono";
+    src: url("Fonts/DTMonoWeb.ttf");
+}
+
+/* fondo */
+html, body {
+    cursor : url("Resources/Mouse/mouseAuto.png") 8 0, auto;
+    background-color: black;
+}
+
+/*textos*/
+.nor_font {
+    color : #ffffff;
+    font-family: "DT Mono", sans-serif;
+    font-size: clamp(20px, 4vw, 40px);
+    letter-spacing: 2px;
+    
+    cursor : url("Resources/Mouse/mouseText.png") 12 0, text;
+}
+.big_font {
+    color : #ffffff;
+    font-family: "DT Mono", sans-serif;
+    font-size: clamp(60px, 4vw, 80px);
+    letter-spacing: 2px;
+    cursor : url("Resources/Mouse/mouseText.png") 12 0, text;
+}
+/* para la animacion del texto */
+.year {
+    top: 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    position : absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.still_him {
+    top: 100%;
+    left : 1%;
+    position : absolute;
+    white-space: nowrap;
+
+    color : #000000;
+    font-family: "DT Mono", sans-serif;
+    font-size: clamp(10px, 4vw, 20px);
+    letter-spacing: 2px;
+    
+    cursor : url("Resources/Mouse/mouseText.png") 12 0, text;
+}
+
+.space {
+    display: inline-block;
+    width : 0.3em;
+    animation : none;
+}
+
+.revolving span {
+    display: inline-block;
+    
+    animation: spin 1s ease-in-out infinite alternate-reverse;
+    animation-fill-mode: both;
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+#puzzle {
+    position: absolute;
+    top: 25%;
+    left: 29%;
+    display: flex;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 20px;
+    align-items: center;
+}
+.letter-row {
+    display: flex;
+    gap: 5px;
+}
+.letter-btn {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-btn.animate {
+    animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cosmic {
+    animation: cosmicPulse 4s ease-in-out forwards;
+}
+
+@keyframes cosmicPulse {
+    0%   { transform: scale(0.9); opacity: 0; }
+    100%  { transform: scale(1); opacity: 1; filter: brightness(1.4); }
+}
+
+
+#hide {
+    display : none;
+}
